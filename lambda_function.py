@@ -20,7 +20,7 @@ def lambda_handler(event, context):
     results_of_calculation.to_csv(file_like_object)
     #print(file_like_object.getvalue())
     base64_encoded_file=file2str(file_like_object.getvalue().encode())
-    send_email(filename='price_precision.csv',file=base64_encoded_file,address='H.Yusuff@Bankhaus-Scheich.de', subject='Price precision for today')
+    send_email(filename='price_precision.csv',file=base64_encoded_file,address='kkk', subject='Price precision for today')
     stop = datetime.datetime.utcnow()
     delta = stop - start
     print(f"This took {delta}")
